@@ -4,5 +4,19 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        return min(nums)
+        l = 0
+        r = len(nums) - 1
+
+        while l < r:
+
+            mid = (l + r) // 2
+
+            if nums[mid] < nums[r]:
+                r = mid
+            elif nums[mid] > nums[r]:
+                l = mid + 1
+            elif nums[mid] == nums[r]:
+                r -= 1
+
+        return nums[l]
         
