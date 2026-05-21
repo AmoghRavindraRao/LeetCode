@@ -20,4 +20,6 @@ class Solution(object):
                 temp += j
                 if temp in data:
                     max_len = max(max_len, len(temp))
+                else:
+                    break
         return max_len
