@@ -12,16 +12,14 @@ class Solution(object):
             if i in memo:
                 return memo[i]
 
-            best = 1  # starting at index i counts as visiting 1 index
+            best = 1
 
-            # jump to the right
             for j in range(i + 1, min(n, i + d + 1)):
                 if arr[j] >= arr[i]:
                     break
 
                 best = max(best, 1 + dfs(j))
 
-            # jump to the left
             for j in range(i - 1, max(-1, i - d - 1), -1):
                 if arr[j] >= arr[i]:
                     break
