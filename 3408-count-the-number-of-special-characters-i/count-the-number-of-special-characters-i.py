@@ -9,4 +9,6 @@ class Solution(object):
         for i in word:
             if i.isupper() and lower(i) in word:
                 count += 1
+            elif i.islower():
+                break
         return count
