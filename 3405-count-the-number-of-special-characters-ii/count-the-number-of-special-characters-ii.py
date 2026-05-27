@@ -5,7 +5,7 @@ class Solution(object):
         :type word: str
         :rtype: int
         """
-        s = sorted(list(set(word)))
+        s = list(set(word))
         count = 0
         for i in s:
             if i.isupper():
