@@ -5,6 +5,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        counts = Counter(nums)
-        return max(counts, key=counts.get)
+        data = {}
+        for i in nums:
+            if i in data:
+                data[i] +=1
+            else:
+                data[i] = 0
+        return max(data, key=data.get)
         
