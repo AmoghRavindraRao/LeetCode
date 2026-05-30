@@ -10,6 +10,6 @@ class Solution(object):
             if i in data:
                 data[i] +=1
             else:
-                data[i] = 0
+                data[i] = 1
         return max(data, key=data.get)
         
