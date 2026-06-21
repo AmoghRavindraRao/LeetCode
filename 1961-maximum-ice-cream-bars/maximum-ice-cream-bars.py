@@ -17,6 +17,7 @@ class Solution(object):
         # Reconstruct the original array in place
         index = 0
         ans = 0
+        flag = False
         for num, frequency in enumerate(count):
             for _ in range(frequency):
                 arr[index] = num
@@ -25,5 +26,8 @@ class Solution(object):
                     coins -= num
                     ans += 1
                 else:
+                    flag = True
                     break
+            if flag:
+                break
         return ans
