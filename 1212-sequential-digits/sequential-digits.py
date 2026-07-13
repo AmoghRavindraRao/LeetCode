@@ -14,7 +14,7 @@ class Solution(object):
             j = l
             while j <= 9:
                 temp = int(s[i:j])
-                if low <= temp and temp <= high:
+                if low <= temp <= high:
                     ans.append(temp)
                 if temp > high:
                     break
