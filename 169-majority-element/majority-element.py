@@ -1,4 +1,16 @@
-from collections import Counter
+
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        return max(dict(Counter(nums)), key=dict(Counter(nums)).get)
+        count = 0
+        winner = 0
+        for i in nums:
+
+            if count == 0:
+                winner = i
+                count = 1
+            elif i == winner:
+                count += 1
+            else:
+                count -= 1
+        
+        return winner
